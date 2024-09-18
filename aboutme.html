@@ -11,6 +11,70 @@
 
     <link rel="stylesheet" href="portfolio.css">
 
+
+    <style>
+      .table-container {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
+      }
+
+      table {
+          width: 100%;
+          border-collapse: collapse;
+      }
+
+      thead th {
+          background-color: #000000;
+          padding: 10px;
+          text-align: left;
+      }
+
+      tbody td {
+          padding: 10px;
+          border: 5px solid #000000;
+      }
+
+      /* Make table scroll horizontally on small screens */
+      @media (max-width: 768px) {
+          thead th {
+              font-size: 12px;
+          }
+
+          tbody td {
+              font-size: 12px;
+          }
+      }
+
+      /* Stack table rows vertically on very small screens */
+      @media (max-width: 576px) {
+          table, thead, tbody, th, td, tr {
+              display: block;
+          }
+
+          thead tr {
+              display: none;
+          }
+
+         
+
+          td {
+              border: none;
+              position: relative;
+              padding-left: 50%;
+              white-space: nowrap;
+          }
+
+          td::before {
+              content: attr(data-label);
+              position: absolute;
+              left: 0;
+              width: 50%;
+              padding-left: 10px;
+              font-weight: bold;
+              white-space: nowrap;
+          }
+      }
+  </style>
 </head>
 <body>
        <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -33,17 +97,17 @@
                   </svg>  About Me  </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link "> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-map-fill" viewBox="0 0 16 16">
+                <a class="nav-link " href="project.html"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-map-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.598-.49L10.5.99 5.598.01a.5.5 0 0 0-.196 0l-5 1A.5.5 0 0 0 0 1.5v14a.5.5 0 0 0 .598.49l4.902-.98 4.902.98a.5.5 0 0 0 .196 0l5-1A.5.5 0 0 0 16 14.5zM5 14.09V1.11l.5-.1.5.1v12.98l-.402-.08a.5.5 0 0 0-.196 0zm5 .8V1.91l.402.08a.5.5 0 0 0 .196 0L11 1.91v12.98l-.5.1z"/>
                   </svg> Projects</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link "> 
+                <a class="nav-link " href="contacts.html"> 
                   </svg> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-arrow-down-fill" viewBox="0 0 16 16">
                     <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zm.192 8.159 6.57-4.027L8 9.586l1.239-.757.367.225A4.49 4.49 0 0 0 8 12.5c0 .526.09 1.03.256 1.5H2a2 2 0 0 1-1.808-1.144M16 4.697v4.974A4.5 4.5 0 0 0 12.5 8a4.5 4.5 0 0 0-1.965.45l-.338-.207z"/>
                     <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.354-1.646a.5.5 0 0 1-.722-.016l-1.149-1.25a.5.5 0 1 1 .737-.676l.28.305V11a.5.5 0 0 1 1 0v1.793l.396-.397a.5.5 0 0 1 .708.708z"/>
-                  </svg> Contacts</a>
+                  </svg> Contact Me</a>
               </li>
             </ul>
           
@@ -57,6 +121,116 @@
         <h3>My Information</h3>
 
         <p class="text-muted">Hello!My name is Amrit.I am 9 years old.I am in fourth grade. My birthday is October 15.My favorite colors are pink,purple,and blue.I have four people in my family my dad,mom,brother,and me.I live in America.I like to draw,read,and code also I love math too.</p>
+
+        <br>
+         
+        <H3>My Hobbies</H3>
+       <ol>
+        <li>Drawing</li>
+        <li>Reading</li>
+        <li>Coloring</li>
+        <li>Coding</li>
+        <li>Basketball</li>
+        <li>Gardening</li>
+       </ol>
+
+
+       <table class="table table-bordered border-primary">
+          <thead>
+              <tr>
+                  <th>Time</th>
+                  <th>Monday</th>
+                  <th>Tuesday</th>
+                  <th>Wednesday</th>
+                  <th>Thursday</th>
+                  <th>Friday</th>
+                  <th>Saturday</th>
+                  <th>Sunday</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>8:00 AM - 9:00 AM</td>
+                  <td>Exercise</td>
+                  <td>Exercise</td>
+                  <td>Exercise</td>
+                  <td>Exercise</td>
+                  <td>Exercise</td>
+                  <td>Rest</td>
+                  <td>Rest</td>
+              </tr>
+              <tr>
+                  <td>9:00 AM - 12:00 PM</td>
+                  <td>Work/Study</td>
+                  <td>Work/Study</td>
+                  <td>Work/Study</td>
+                  <td>Work/Study</td>
+                  <td>Work/Study</td>
+                  <td>Personal Projects</td>
+                  <td>Personal Projects</td>
+              </tr>
+              <tr>
+                  <td>12:00 PM - 1:00 PM</td>
+                  <td>Lunch</td>
+                  <td>Lunch</td>
+                  <td>Lunch</td>
+                  <td>Lunch</td>
+                  <td>Lunch</td>
+                  <td>Lunch</td>
+                  <td>Lunch</td>
+              </tr>
+              <tr>
+                  <td>1:00 PM - 5:00 PM</td>
+                  <td>Work/Study</td>
+                  <td>Work/Study</td>
+                  <td>Work/Study</td>
+                  <td>Work/Study</td>
+                  <td>Work/Study</td>
+                  <td>Personal Projects</td>
+                  <td>Personal Projects</td>
+              </tr>
+              <tr>
+                  <td>5:00 PM - 6:00 PM</td>
+                  <td>Relax</td>
+                  <td>Relax</td>
+                  <td>Relax</td>
+                  <td>Relax</td>
+                  <td>Relax</td>
+                  <td>Social Activities</td>
+                  <td>Social Activities</td>
+              </tr>
+              <tr>
+                  <td>6:00 PM - 7:00 PM</td>
+                  <td>Dinner</td>
+                  <td>Dinner</td>
+                  <td>Dinner</td>
+                  <td>Dinner</td>
+                  <td>Dinner</td>
+                  <td>Dinner</td>
+                  <td>Dinner</td>
+              </tr>
+              <tr>
+                  <td>7:00 PM - 10:00 PM</td>
+                  <td>Free Time</td>
+                  <td>Free Time</td>
+                  <td>Free Time</td>
+                  <td>Free Time</td>
+                  <td>Free Time</td>
+                  <td>Relax/TV</td>
+                  <td>Relax/TV</td>
+              </tr>
+              <tr>
+                  <td>10:00 PM - 11:00 PM</td>
+                  <td>Prepare for Bed</td>
+                  <td>Prepare for Bed</td>
+                  <td>Prepare for Bed</td>
+                  <td>Prepare for Bed</td>
+                  <td>Prepare for Bed</td>
+                  <td>Prepare for Bed</td>
+                  <td>Prepare for Bed</td>
+              </tr>
+          </tbody>
+      </table>
       </div>
                            
 
